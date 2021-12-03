@@ -1,0 +1,108 @@
+ADD Food
+Method-POST
+URL-http://localhost:9999/food/add
+Body 1-{
+    "foodType": "Nonveg",
+    "foodName": "Chicken tikka ",
+    "foodDescription": "Chicken tikka toppings with chapati",
+    "foodCost": 500,
+    "foodQuantity": 2
+}
+{
+    "foodId": 4,
+    "foodType": "Nonveg",
+    "foodName": "Chicken tikka ",
+    "foodDescription": "Chicken tikka toppings with chapati",
+    "foodCost": 500.0,
+    "foodQuantity": 2
+}
+Body 2-{
+    "foodType": "Nonveg",
+    "foodName": "Biryani",
+    "foodDescription": "Spicy",
+    "foodCost": 500,
+    "foodQuantity": 4
+}
+{
+    "foodId": 5,
+    "foodType": "Nonveg",
+    "foodName": "Biryani",
+    "foodDescription": "Spicy",
+    "foodCost": 500.0,
+    "foodQuantity": 4
+}
+
+
+DELETE food
+Method-DELETE
+URL-http://localhost:9999/Food/delete/1
+
+
+
+VIEW ALL food
+Method-GET
+URL-http://localhost:9999/Food/viewAllFood
+[
+    {
+        "foodId": 2,
+        "foodType": "Nonveg",
+        "foodName": "Chicken tikka ",
+        "foodDescription": "Chicken tikka toppings with chapati",
+        "foodCost": 500.0,
+        "foodQuantity": 2
+    },
+    {
+        "foodId": 3,
+        "foodType": "Nonveg",
+        "foodName": "Biryani",
+        "foodDescription": "Spicy",
+        "foodCost": 500.0,
+        "foodQuantity": 4
+    },
+    {
+        "foodId": 4,
+        "foodType": "Nonveg",
+        "foodName": "Chicken tikka ",
+        "foodDescription": "Chicken tikka toppings with chapati",
+        "foodCost": 500.0,
+        "foodQuantity": 2
+    },
+    {
+        "foodId": 5,
+        "foodType": "Nonveg",
+        "foodName": "Biryani",
+        "foodDescription": "Spicy",
+        "foodCost": 500.0,
+        "foodQuantity": 4
+    }
+]
+
+DELETE food
+Method-DELETE
+URL-http://localhost:9999/Food/delete/1
+
+
+VIEW food BY ID
+Method-GET
+URL-http://localhost:9091/food/viewfood/2
+
+
+
+UPDATE food
+Method-PUT
+URL-http://localhost:9999/food/UpdateFood
+Body-{
+    "foodId": 2,
+    "foodType": "Extra Olive",
+    "foodName": "Chicken Sausage ",
+    "foodDescription": "Chicken sausage toppings with extra chicken",
+    "foodCost": 500,
+    "foodQuantity": 6
+}
+
+Updated
+
+
+VIEW Food WITHIN MINIMUM COST AND MAXIMUM COST
+Method-GET
+URL-http://localhost:9091/pizza//viewPizzaList/100/600
